@@ -23,7 +23,7 @@ require(["esri/Map", "esri/layers/CSVLayer", "esri/views/MapView", "esri/widgets
     { color: "rgba(0, 0, 255, 1)", ratio: 0.8 },     
     { color: "rgba(0, 0, 139, 1)", ratio: 1 }        
   ],
-  maxPixelIntensity: 125,
+  maxPixelIntensity: 100,
   minPixelIntensity: 0
 };
 
