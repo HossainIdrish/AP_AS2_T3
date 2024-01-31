@@ -13,19 +13,20 @@ require(["esri/Map", "esri/layers/CSVLayer", "esri/views/MapView", "esri/widgets
 
   // Heatmap renderer configuration: defines color gradient and intensity for visualizing crime density
 
-  const renderer = {
-    type: "heatmap",
-    colorStops: [
-      { color: "rgba(0, 255, 0, 0)", ratio: 0 },
-      { color: "rgba(0, 255, 0, 1)", ratio: 0.2 },
-      { color: "rgba(255, 255, 0, 1)", ratio: 0.4 },
-      { color: "rgba(255, 140, 0, 1)", ratio: 0.6 },
-      { color: "rgba(255, 0, 0, 1)", ratio: 0.8 },
-      { color: "rgba(255, 0, 0, 1)", ratio: 1 }
-    ],
-    maxPixelIntensity: 150,
-    minPixelIntensity: 0
-  };
+ const renderer = {
+  type: "heatmap",
+  colorStops: [
+    { color: "rgba(135, 206, 250, 0)", ratio: 0 },   // Sky Blue, transparent
+    { color: "rgba(135, 206, 250, 1)", ratio: 0.2 }, // Sky Blue
+    { color: "rgba(0, 191, 255, 1)", ratio: 0.4 },   // Deep Sky Blue
+    { color: "rgba(30, 144, 255, 1)", ratio: 0.6 },  // Dodger Blue
+    { color: "rgba(0, 0, 255, 1)", ratio: 0.8 },     // Blue
+    { color: "rgba(0, 0, 139, 1)", ratio: 1 }        // Dark Blue
+  ],
+  maxPixelIntensity: 100,
+  minPixelIntensity: 0
+};
+
 
 // CSV Layer with heatmap rendering for St. Louis crime data
 
@@ -38,14 +39,14 @@ require(["esri/Map", "esri/layers/CSVLayer", "esri/views/MapView", "esri/widgets
   });
 
   const map = new Map({
-    basemap: "dark-gray-vector",
+    basemap: "gray-vector",
     layers: [layer]
   });
 
   const view = new MapView({
     container: "viewDiv",
-    center: [-90.1994, 38.6270], // Center on St. Louis
-    zoom: 12,
+    center: [-90.1994, 38.6270], 
+    zoom: 10,
     map: map
   });
 
