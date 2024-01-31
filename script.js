@@ -7,7 +7,7 @@ require(["esri/Map", "esri/layers/CSVLayer", "esri/views/MapView", "esri/widgets
   const url = "https://raw.githubusercontent.com/orhuna/WebGIS_SLU_M1/main/Module%202/stl_crime_wgs_84.csv";
 
   const template = {
-    title: "Crime Incident",
+    title: "Crime",
     content: "Crime occurred at {ILEADSStreet}.<br>Location: Lat {Latitude}, Lon {Longitude}."
   };
 
@@ -16,14 +16,14 @@ require(["esri/Map", "esri/layers/CSVLayer", "esri/views/MapView", "esri/widgets
  const renderer = {
   type: "heatmap",
   colorStops: [
-    { color: "rgba(135, 206, 250, 0)", ratio: 0 },   // Sky Blue, transparent
-    { color: "rgba(135, 206, 250, 1)", ratio: 0.2 }, // Sky Blue
-    { color: "rgba(0, 191, 255, 1)", ratio: 0.4 },   // Deep Sky Blue
-    { color: "rgba(30, 144, 255, 1)", ratio: 0.6 },  // Dodger Blue
-    { color: "rgba(0, 0, 255, 1)", ratio: 0.8 },     // Blue
-    { color: "rgba(0, 0, 139, 1)", ratio: 1 }        // Dark Blue
+    { color: "rgba(135, 206, 250, 0)", ratio: 0 },   
+    { color: "rgba(135, 206, 250, 1)", ratio: 0.2 }, 
+    { color: "rgba(0, 191, 255, 1)", ratio: 0.4 },   
+    { color: "rgba(30, 144, 255, 1)", ratio: 0.6 },  
+    { color: "rgba(0, 0, 255, 1)", ratio: 0.8 },     
+    { color: "rgba(0, 0, 139, 1)", ratio: 1 }        
   ],
-  maxPixelIntensity: 100,
+  maxPixelIntensity: 125,
   minPixelIntensity: 0
 };
 
