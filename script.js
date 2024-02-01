@@ -13,15 +13,15 @@ require(["esri/Map", "esri/layers/CSVLayer", "esri/views/MapView", "esri/widgets
 
   // Heatmap renderer configuration: defines color gradient and intensity for visualizing crime density
 
- const renderer = {
+const renderer = {
   type: "heatmap",
   colorStops: [
-    { color: "rgba(135, 206, 250, 0)", ratio: 0 },   
-    { color: "rgba(135, 206, 250, 1)", ratio: 0.2 }, 
-    { color: "rgba(0, 191, 255, 1)", ratio: 0.4 },   
-    { color: "rgba(30, 144, 255, 1)", ratio: 0.6 },  
-    { color: "rgba(0, 0, 255, 1)", ratio: 0.8 },     
-    { color: "rgba(0, 0, 139, 1)", ratio: 1 }        
+    { color: "rgba(255, 255, 178, 0)", ratio: 0 },    
+    { color: "rgba(254, 204, 92, 1)", ratio: 0.2 },   
+    { color: "rgba(253, 141, 60, 1)", ratio: 0.4 },   
+    { color: "rgba(252, 78, 42, 1)", ratio: 0.6 },    
+    { color: "rgba(227, 26, 28, 1)", ratio: 0.8 },    
+    { color: "rgba(177, 0, 38, 1)", ratio: 1 }       
   ],
   maxPixelIntensity: 100,
   minPixelIntensity: 0
